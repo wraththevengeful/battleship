@@ -1,0 +1,22 @@
+:root{
+    --gameboard-square-dimension:30rem;
+    --gamegrid-square-dimension: 0.3rem;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.gameBoard{
+    height: var(--gameboard-square-dimension);
+    width: var(--gameboard-square-dimension);
+    background-color: cadetblue;
+    display: grid;
+    grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+}
+
+.gamegrid{
+    background-color: white;
+    margin: 1px;
+}
