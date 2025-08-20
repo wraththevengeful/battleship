@@ -28,19 +28,19 @@ test(`Ship CLass : Stop Hits after isSunk`, () => {
 
 test(`Gameboard : Test Placing Ships 1`, () => {
     const game = new GameBoard();
-    game.placeShip(3, [[0, 0], [1, 0], [2, 0]]);
+    game.placeShip(3, [[0, 0], [1, 0], [2, 0]],`H`);
     expect(game.ships.length).toBe(1);
 })
 
 test(`Gameboard : Test Placing Ships 2`, () => {
     const game = new GameBoard();
-    game.placeShip(3, [[0, 0], [1, 0], [2, 0]]);
+    game.placeShip(3, [[0, 0], [1, 0], [2, 0]],`H`);
     expect(game.ships[0].coordinates).toEqual([[0, 0], [1, 0], [2, 0]]);
 })
 
 test(`Gameboard : Attack a Ship in board`, () => {
     const game = new GameBoard();
-    game.placeShip(3, [[0, 0], [1, 0], [2, 0]]);
+    game.placeShip(3, [[0, 0], [1, 0], [2, 0]],`H`);
     game.receiveAttack([0,0]);
     game.receiveAttack([1,0])
     expect(game.ships[0].noOfHits).toBe(2);
@@ -48,7 +48,7 @@ test(`Gameboard : Attack a Ship in board`, () => {
 
 test(`Gameboard : track attacks`, () => {
     const game = new GameBoard();
-    game.placeShip(3, [[0, 0], [1, 0], [2, 0]]);
+    game.placeShip(3, [[0, 0], [1, 0], [2, 0]],`H`);
     game.receiveAttack([0,0]);
     game.receiveAttack([1,0])
     expect(game.hitAttacks.length).toBe(2);
@@ -56,7 +56,7 @@ test(`Gameboard : track attacks`, () => {
 
 test(`Gameboard : track attacks`, () => {
     const game = new GameBoard();
-    game.placeShip(3, [[0, 0], [1, 0], [2, 0]]);
+    game.placeShip(3, [[0, 0], [1, 0], [2, 0]],`H`);
     game.receiveAttack([0,0]);
     game.receiveAttack([1,0]);
     game.receiveAttack([4,0]);
@@ -66,7 +66,7 @@ test(`Gameboard : track attacks`, () => {
 
 test(`Gameboard : track attacks`, () => {
     const game = new GameBoard();
-    game.placeShip(3, [[0, 0], [1, 0], [2, 0]]);
+    game.placeShip(3, [[0, 0], [1, 0], [2, 0]], `H`);
     game.receiveAttack([0,0]);
     game.receiveAttack([1,0]);
     game.receiveAttack([4,0]);
