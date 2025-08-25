@@ -69,8 +69,8 @@ class Player {
         return this.board.ships;
     }
 
-    placeShip(length, coordinate, orientation) {
-        return this.board.placeShip(length, coordinate, orientation);
+    placeShip(length, coordinates, orientation) {
+        return this.board.placeShip(length, coordinates, orientation);
     }
 
     receiveAttack(coordinates){

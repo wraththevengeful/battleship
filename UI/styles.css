@@ -1,0 +1,89 @@
+main {
+    display: flex;
+    padding: 2rem;
+    justify-content: space-around;
+}
+
+.gameBoard {
+    height: 30rem;
+    width: 30rem;
+    display: grid;
+    grid-template: repeat(10, 1fr)/repeat(10, 1fr);
+    border: 2px solid black;
+}
+
+.gameGrid {
+    border: 0.1px solid black;
+}
+
+/* BOARDS */
+.disableAndHideBoard{
+    pointer-events: none;
+}
+
+
+/* SHIPS */
+#shipyard {
+    display: flex;
+    justify-content: center;
+}
+
+.shipOuterFrame {
+    /* border:1px solid black; */
+    height: 9rem;
+    padding: 3rem;
+    display: flex;
+}
+
+.shipOuterFrame[data-orientation="h"] {
+    flex-direction: row;
+}
+
+.shipOuterFrame[data-orientation="v"] {
+    flex-direction: column;
+}
+
+
+.shipInnerBlock {
+    width: 3rem;
+    height: 3rem;
+    background-color: cadetblue;
+    border: 0.1px solid black;
+}
+
+.turnButton {
+    height: 20px;
+    width: 20px;
+}
+
+.disableShipPlacement {
+    pointer-events: none;
+    opacity: 50%;
+}
+
+/* SHIP MODES */
+
+.gridModeShip {
+    background-color: cadetblue;
+}
+
+
+/* GRID UNTOUCHED */
+.gridModeUntouched {
+    background-color: white !important;
+}
+
+.gridModeHit {
+    background-color: red !important;
+    pointer-events: none;
+}
+
+.gridModeDisabled {
+    pointer-events: none;
+    background-color: gray;
+}
+
+.gridModeHide{
+    pointer-events: none;
+    background-color: gray;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="./script.js" defer></script>
+    <script type="module" src="../gamelogic/src.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Battleship</h1>
+    </header>
+    <main id="gameWindow">
+        <div id="playerZero">
+            <h2>Player 1</h2>
+            <div class="gameBoard" data-player-index="0"></div>
+        </div>
+        <div id="playerOne">
+            <h2>Player 2</h2>
+            <div class="gameBoard" data-player-index="1"></div>
+        </div>
+    </main>
+    <div id="shipyard">
+        <div class="shipBox">
+            <div class="shipOuterFrame" id="battleship" draggable="true" data-orientation="v" data-length="3">
+                <div class="shipInnerBlock"></div>
+                <div class="shipInnerBlock"></div>
+                <div class="shipInnerBlock"></div>
+            </div>
+            <h3>Battleship</h3>
+            <img src="./assets/turn.svg" alt="turn ship" class="turnButton">
+        </div>
+        <div class="shipBox">
+            <div class="shipOuterFrame" id="cruiser" draggable="true" data-orientation="v" data-length="2">
+                <div class="shipInnerBlock"></div>
+                <div class="shipInnerBlock"></div>
+            </div>
+            <h3>Cruiser</h3>
+            <img src="./assets/turn.svg" alt="turn ship" class="turnButton">
+        </div>
+        <div class="shipBox">
+            <div class="shipOuterFrame" id="destroyer" draggable="true" data-orientation="v" data-length="1">
+                <div class="shipInnerBlock"></div>
+            </div>
+            <h3>Destroyer</h3>
+            <img src="./assets/turn.svg" alt="turn ship" class="turnButton">
+        </div>
+    </div>
+</body>
+
+</html>
